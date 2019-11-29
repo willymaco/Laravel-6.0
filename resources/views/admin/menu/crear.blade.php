@@ -3,6 +3,10 @@
     Sistema Menús
 @endsection
 
+@section('scripts')
+    <script src="{{ asset("assets/pages/scripts/admin/menu/crear.js") }}" type="text/javascript"></script>
+@endsection
+
 @section('contenido')
     <div class="row">
         <div class="col-lg-12">
@@ -19,10 +23,9 @@
                     </div>
                     <div class="box-footer">
                         <div class="col-lg-3"></div>
-                            <div class="col-lg-6">
-                                @include('includes.boton-form-crear')
-                            </div>
-                        
+                        <div class="col-lg-6">
+                            @include('includes.boton-form-crear')
+                        </div>
                     </div>
                 </form>
             </div>
