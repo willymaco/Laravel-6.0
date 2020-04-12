@@ -1,15 +1,11 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Carbon\Carbon;
+// use Carbon\Carbon;
+Use App\Models\Admin\Rol;
 
 class TablaRolSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
         $rols = [
@@ -18,10 +14,16 @@ class TablaRolSeeder extends Seeder
             'supervisor'
         ];
         foreach ($rols as $key => $value) {
+            Rol::create([
+                'nombre' => $value,
+            ]);
+        }
+
+       /*  foreach ($rols as $key => $value) {
             DB::table('rol')->insert([
                 'nombre' => $value,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s')
             ]);
-        }
+        } */
     }
 }
