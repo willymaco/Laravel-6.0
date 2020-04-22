@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\Seguridad\Usuario;
-use Illuminate\Support\Facades\Hash;
 
 class UsuarioAdministradorSeeder extends Seeder
 {

@@ -19,7 +19,7 @@ $(document).ready(function () {
 
     $('ul.sidebar-menu').find('li.active').parents('li').addClass('active');
    
-    /*   // Trabajo con Ventana de Roles.
+    // Trabajo con Ventana de Roles.
     const modal = $('#modal-seleccionar-rol');
     if (modal.length && modal.data('rol-set') == 'NO') {
         modal.modal('show');
@@ -52,5 +52,5 @@ $(document).ready(function () {
                 }
             }
         });
-    } */
+    }
 });
