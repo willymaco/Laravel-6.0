@@ -26,7 +26,7 @@ $(document).ready(function () {
         ajaxRequest(data, url, 'verLibro');
     });
 
-    function ajaxRequest(data, url, funcion, form = false) {
+    function ajaxRequest(data, url, funcion, form=false) {
         $.ajax({
             url: url,
             type: 'POST',

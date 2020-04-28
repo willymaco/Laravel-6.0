@@ -1,5 +1,11 @@
 <?php
 
+/*RUTAS PASSWORD RESET*/
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
+
 Route::get('/', 'InicioController@index')->name('inicio');
 Route::get('seguridad/login', 'Seguridad\LoginController@index')->name('login');
 Route::post('seguridad/login', 'Seguridad\LoginController@login')->name('login_post');
@@ -47,6 +53,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
 Route::get('libro', 'LibroController@index')->name('libro');
 Route::get('libro/crear', 'LibroController@crear')->name('crear_libro');
 Route::post('libro', 'LibroController@guardar')->name('guardar_libro');
+Route::post('libro/{libro}', 'LibroController@ver')->name('ver_libro');
 Route::get('libro/{id}/editar', 'LibroController@editar')->name('editar_libro');
 Route::put('libro/{id}', 'LibroController@actualizar')->name('actualizar_libro');
 Route::delete('libro/{id}', 'LibroController@eliminar')->name('eliminar_libro');
